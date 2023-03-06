@@ -40,7 +40,7 @@ public class ReadXML {
         String name = root.getAttribute("Name");
 
         // extracting the gesture name
-        String gesture = name.substring(0, name.length() - 2);
+        String gesture = name.substring(0, name.length() - 1).replaceAll("square","sq").toLowerCase();
 
         NodeList nList = doc.getElementsByTagName("Point");
 

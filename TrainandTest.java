@@ -1,3 +1,7 @@
+/*
+ * @author Namita Namita
+ */
+// Import statement for all necessary libraries
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -12,7 +16,7 @@ public class TrainandTest {
         ArrayList<ArrayList<CustomReturnType>> userData = new ArrayList<>();
 
         // to store the time taken for training
-        double[] timePerTrainingSamples = new double[8];
+       // double[] timePerTrainingSamples = new double[8];
 
         // creatung the log file
         try {
@@ -32,7 +36,7 @@ public class TrainandTest {
             try (FileOutputStream logger = new FileOutputStream("HCIRA-Proj1-logfile.csv", true)) {
                 // writing to log file
                 logger.write(
-                        ("Recognition Log: [Harshwardhan Chauhan] // [$1 Recognizer] // [Dataset] // USER-DEPENDENT RANDOM-10,,,,,,,,,,,\n")
+                        ("Recognition Log: [Namita Namita and Harshwardhan Chauhan] // [$1 Recognizer] // [Dataset] // USER-DEPENDENT RANDOM-10,,,,,,,,,,,\n")
                                 .getBytes());
 
                 //writing headers to log file
@@ -44,32 +48,29 @@ public class TrainandTest {
                 double totalResult = 0;
                 double totalCorrect = 0;
                 // iterate for every user
-                for (int userID = 2; userID <= 11; userID++) {
+                for (int userID = 1; userID <= 6; userID++) {
                     double userResult = 0;
                     double userTotal = 0;
-                    if (userID < 10) {
                         user = "s" + "0" + userID;
-                    } else {
-                        user = "s" + userID;
-                    }
+                    
 
                     String GestureType[] = new String[] {
-                        "Arrow",
-                        "Caret",
-                        "Check",
-                        "Circle",
-                        "Delete",
-                        "Feft_curly_brace",
-                        "Left_square_bracket",
-                        "Pigtail",
-                        "Question_mark",
-                        "Rectangle",
-                        "Right_curly_brace",
-                        "Right_square_bracket",
-                        "Star",
-                        "Triangle",
-                        "V",
-                        "X"
+                        "arrow",
+                        "caret",
+                        "check",
+                        "circle",
+                        "delete",
+                        "left_curly_brace",
+                        "left_sq_bracket",
+                        "pigtail",
+                        "zigzag",
+                        "rectangle",
+                        "right_curly_brace",
+                        "right_sq_bracket",
+                        "star",
+                        "triangle",
+                        "v",
+                        "x"
                     };
 
                     for (int gestures = 0; gestures < 16; gestures++) {
