@@ -62,7 +62,7 @@ public class DollarOneRecognizer {
                 }
                
                 double score = 1 - b / (.5 * Math.sqrt(250 * 250 + 250 * 250));
-               // System.out.println(templates.get(i).get(j).gesture + "-"+score +"-"+ templates.get(i).get(j).gestureNumber);
+               //System.out.println(templates.get(i).get(j).gesture + "-"+score +"-"+ templates.get(i).get(j).gestureNumber);
 
                 // adding to the nbestList gesture type, score and gesture number
                 nbestList.add(new CustomReturnType(templates.get(i).get(j).gesture, Double.parseDouble(String.format("%.5f", score)), templates.get(i).get(j).gestureNumber));

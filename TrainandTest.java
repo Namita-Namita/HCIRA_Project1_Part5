@@ -79,7 +79,7 @@ public class TrainandTest {
                     }
 
                     // iterate through training sample size
-                    for (int i = 0; i < 100; i++) {
+                    for (int i = 0; i < 10; i++) {
                         for (int trainingSampleSize = 1; trainingSampleSize <=9; trainingSampleSize++) {
                             for (int l = 0; l < userData.size(); l++) {
                                 Collections.shuffle(userData.get(l)); //shuffle the user data
