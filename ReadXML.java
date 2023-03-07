@@ -38,10 +38,13 @@ public class ReadXML {
         Element root = doc.getDocumentElement();
 
         String name = root.getAttribute("Name");
-
+        String gesture;
         // extracting the gesture name
-        String gesture = name.substring(0, name.length() - 1).replaceAll("square","sq").toLowerCase();
-
+        if(name.contains("10")){
+         gesture = name.substring(0, name.length()-2).replaceAll("square","sq").toLowerCase();
+        }else{
+         gesture = name.substring(0, name.length()-1).replaceAll("square","sq").toLowerCase();
+        }
         NodeList nList = doc.getElementsByTagName("Point");
 
         ArrayList<Point> points = new ArrayList<>();
