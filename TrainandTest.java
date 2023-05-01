@@ -1,5 +1,6 @@
 /*
  * @author Namita Namita
+ * @author Harshwardhan chauhan
  */
 // Import statement for all necessary libraries
 import java.io.File;
@@ -36,7 +37,7 @@ public class TrainandTest {
             try (FileOutputStream logger = new FileOutputStream("HCIRA-Proj1-logfile.csv", true)) {
                 // writing to log file
                 logger.write(
-                        ("Recognition Log: [Namita Namita and Harshwardhan Chauhan] // [$1 Recognizer] // [Dataset] // USER-DEPENDENT RANDOM-10,,,,,,,,,,,\n")
+                        ("Recognition Log: [Namita Namita and Harshvardhan Chauhan] // [$1 Recognizer] // [Dataset] // USER-DEPENDENT RANDOM-10,,,,,,,,,,,\n")
                                 .getBytes());
 
                 //writing headers to log file
@@ -48,10 +49,13 @@ public class TrainandTest {
                 double totalResult = 0;
                 double totalCorrect = 0;
                 // iterate for every user
-                for (int userID = 1; userID <= 6; userID++) {
+                for (int userID = 2; userID <= 11; userID++) {
                     double userResult = 0;
                     double userTotal = 0;
+                    if(userID<=9)
                         user = "s" + "0" + userID;
+                    else
+                    user = "s" + userID;
                     
 
                     String GestureType[] = new String[] {
@@ -59,11 +63,11 @@ public class TrainandTest {
                         "caret",
                         "check",
                         "circle",
-                        "delete",
+                        "delete_mark",
                         "left_curly_brace",
                         "left_sq_bracket",
                         "pigtail",
-                        "zigzag",
+                        "question_mark",
                         "rectangle",
                         "right_curly_brace",
                         "right_sq_bracket",
@@ -79,7 +83,7 @@ public class TrainandTest {
                     }
 
                     // iterate through training sample size
-                    for (int i = 0; i < 10; i++) {
+                    for (int i = 0; i < 100; i++) {
                         for (int trainingSampleSize = 1; trainingSampleSize <=9; trainingSampleSize++) {
                             for (int l = 0; l < userData.size(); l++) {
                                 Collections.shuffle(userData.get(l)); //shuffle the user data
@@ -177,7 +181,7 @@ public class TrainandTest {
 
                         }
                     }
-                    System.out.println("User "+ (userID-1)+" Accuracy: "+(userResult/userTotal));
+                    System.out.println("User "+ (userID)+" Accuracy: "+(userResult/userTotal));
                 }
                 logger.write(("TotalAvgAccuracy: "+(totalCorrect/totalResult)).getBytes());
             }

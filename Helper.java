@@ -1,5 +1,6 @@
 /*
  * @author Namita Namita
+ * @Harshwardhan Chauhan
  */
 import java.util.ArrayList;
 
@@ -20,7 +21,7 @@ public class Helper {
                 gestureNumber = "0"+i;
 
             // creating log file
-            filename = "xml_logs/" + user +"/"+ gestureType + gestureNumber+".xml";
+            filename = "xml_logs/" + user +"/"+ "medium/"+gestureType + gestureNumber+".xml";
 
             CustomReturnType temp = normalize (ReadXML.Read(filename));
 

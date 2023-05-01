@@ -1,5 +1,6 @@
 /*
  * @author Namita Namita
+ * * @author Harshwardhan chauhan
  */
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -41,12 +42,13 @@ public class ReadXML {
         String gesture;
         // extracting the gesture name
         if(name.contains("10")){
-         gesture = name.substring(0, name.length()-2).replaceAll("square","sq").toLowerCase();
-         root.setAttribute("Name", name.toLowerCase());
+            gesture = name.substring(0, name.length()-2).replaceAll("square","sq").toLowerCase();
+        //  //root.setAttribute("Name", name.toLowerCase());
         }else{
-         gesture = name.substring(0, name.length()-1).replaceAll("square","sq").toLowerCase();
-         root.setAttribute("Name", gesture+"0"+name.substring(name.length()-1, name.length()));
+         gesture = name.substring(0, name.length()-2).replaceAll("square","sq").toLowerCase();
+         //root.setAttribute("Name", gesture+"0"+name.substring(name.length()-1, name.length()));
         }
+        
         NodeList nList = doc.getElementsByTagName("Point");
 
         ArrayList<Point> points = new ArrayList<>();

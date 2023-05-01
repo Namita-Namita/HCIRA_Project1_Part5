@@ -1,5 +1,6 @@
 /*
  * @author Namita Namita
+ * * @author Harshwardhan chauhan
  */
 // Point class with values x, y, t values to store the co-ordinates and time t.
 public class Point
