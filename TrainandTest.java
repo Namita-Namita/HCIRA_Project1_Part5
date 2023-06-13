@@ -1,6 +1,6 @@
 /*
  * @author Namita Namita
- * @author Harshwardhan chauhan
+ *
  */
 // Import statement for all necessary libraries
 import java.io.File;

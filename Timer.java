@@ -1,6 +1,6 @@
 /*
  * @author Namita Namita
- * * @author Harshwardhan chauhan
+ *
  */
 public class Timer {
     private long startTime;
